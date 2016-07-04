@@ -5,10 +5,14 @@ var budgetMain = {
 };
 
 function BudgetMainController(budgetService) {
-    //contructeur
+    /**
+     * Constructeur
+     */
     this.$onInit = function() {
+        //locales pour moment
         moment.locale('fr');
         this.displayDate = moment().format('MMMM YYYY');
+        //Initilisation statique des données (TODO: depuis DB)
         this.budget = {
             date: "07-2016",
             revenus: [
@@ -25,12 +29,24 @@ function BudgetMainController(budgetService) {
             ]
         };
     };
+
+    // Fonctions du controller dispo dans l'ihm
+    /**
+     * Choisit la date précédente - 1 mois
+     */
     this.previous = function() {
         this.displayDate = moment(this.displayDate, 'MMMM YYYY').subtract(1, 'M').format('MMMM YYYY');
     };
+    /**
+     * Choisit la date suivante + 1 mois
+     */
     this.next = function() {
         this.displayDate = moment(this.displayDate, 'MMMM YYYY').add(1, 'M').format('MMMM YYYY');
     };
+    /**
+     * Calcule le budget restant pour le mios en cours
+     * Revenus - dépenses
+     */
     this.getReste = function() {
         var revenusTotal = 0;
         var depensesOccasionnellesTotal = 0;
@@ -46,6 +62,9 @@ function BudgetMainController(budgetService) {
         })
         return revenusTotal - depensesOccasionnellesTotal - depensesRegulieresTotal;
     };
+    /**
+     * Test. Fonction temporaire qui appelle le service pour requêter la base de données.
+     */
     this.getApi = function(param) {
         budgetService.getTestApi(param).then(function(data) {
             console.log(data);

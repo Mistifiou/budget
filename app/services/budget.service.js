@@ -1,3 +1,7 @@
+/**
+ * @param $http Service http d'angular
+ * Fait une requête GET vers la route correspondante à l'API définie dans le routing d'express
+ */
 function budgetService($http) {
     this.getTestApi = function(param) {
         return $http.get('/api').then(
