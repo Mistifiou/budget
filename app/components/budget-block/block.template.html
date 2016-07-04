@@ -1,0 +1,51 @@
+<div ng-transclude></div>
+<div>
+    <button ng-click="$ctrl.getApi(666)">Test API</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Intitulé</th>
+                <th>Valeur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="budget in $ctrl.blockData">
+                <td>{{budget.id}}</td>
+                <td>{{budget.intitule}}</td>
+                <td>
+                    <span ng-if="!budget.enModification">{{budget.valeur}}</span>
+                    <span ng-if="budget.enModification"><input type="text" class="valeur" ng-model="$ctrl.valeurModifiee"></span>
+                    <span class="edit-btns">
+                        <button type="button" ng-if="!budget.enModification" ng-click="$ctrl.edit(budget, $index)" class="glyphicon glyphicon-pencil"></button>
+                        <button type="button" ng-if="!budget.enModification" ng-click="$ctrl.delete(budget, $index)" class="glyphicon glyphicon-remove"></button>
+                        <button type="button" ng-if="budget.enModification" ng-click="$ctrl.update($ctrl.valeurModifiee, $index)" class="glyphicon glyphicon-ok-circle"></button>
+                        <button type="button" ng-if="budget.enModification" ng-click="budget.enModification = false" class="glyphicon glyphicon-remove-circle"></button>
+                    </span>
+                </td>
+            </tr>
+            <tr ng-if="$ctrl.addNew">
+                <td colspan="2">
+                    <input type="text" ng-model="$ctrl.newEntry.intitule" placeholder="Intitulé">
+                </td>
+                <td>
+                    <input type="text" class="valeur" ng-model="$ctrl.newEntry.valeur" placeholder="Valeur">
+                    <span class="edit-btns">
+                        <button type="button" ng-click="$ctrl.save()" class="glyphicon glyphicon-ok-circle"></button>
+                        <button type="button" ng-click="$ctrl.addNew = false" class="glyphicon glyphicon-remove-circle"></button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    Total: {{ $ctrl.total }}
+                    <button class="btn btn-default btn-float" ng-click="$ctrl.addNew = true">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

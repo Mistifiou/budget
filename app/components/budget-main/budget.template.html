@@ -1,0 +1,28 @@
+<div class="row row-centered">
+    <div class="col-md-12">
+        <button class="btn btn-default" ng-click="$ctrl.previous()">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+        </button>
+        <span class="text-capitalize">{{ $ctrl.displayDate }}</span>
+        <button class="btn btn-default" ng-click="$ctrl.next()">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <budget-block type="revenus">
+            <h2>Revenus</h2>
+        </budget-block>
+    </div>
+    <div class="col-md-4">
+        <budget-block type="depensesRegulieres">
+            <h2>Dépenses régulières</h2>
+        </budget-block>
+    </div>
+    <div class="col-md-4">
+        <budget-block type="depensesOccasionnelles">
+            <h2>Dépensens occasionnelles</h2>
+        </budget-block>
+    </div>
+</div>

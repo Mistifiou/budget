@@ -1,0 +1,55 @@
+.row-centered {
+    text-align:center;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: beige;
+}
+
+.edit-btns {
+    float: right;
+    visibility: hidden;
+}
+
+tr:hover .edit-btns {
+    visibility: visible;
+}
+
+input.valeur {
+    max-width: 70px;
+}
+
+tfoot tr:hover .btn-float {
+    visibility: visible;
+}
+
+@media screen and (min-width: 992px) {
+    .btn-float {
+        position: absolute;
+        right: 50%;
+        bottom: 45px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 991px) {
+    .btn-float {
+        position: absolute;
+        right: 50%;
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+        visibility: hidden;
+    }
+}
