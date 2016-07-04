@@ -1,10 +1,7 @@
 npm start
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
 TODO:
-
-sauver sur git
-
-ajouter un composant parent qui calcule le reste revenus - depenses
 
 validation sur edit et add
 

@@ -11,18 +11,24 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <budget-block type="revenus">
+        <budget-block type="revenus" budget="$ctrl.budget.revenus">
             <h2>Revenus</h2>
         </budget-block>
     </div>
     <div class="col-md-4">
-        <budget-block type="depensesRegulieres">
+        <budget-block type="depensesRegulieres" budget="$ctrl.budget.depensesRegulieres">
             <h2>Dépenses régulières</h2>
         </budget-block>
     </div>
     <div class="col-md-4">
-        <budget-block type="depensesOccasionnelles">
+        <budget-block type="depensesOccasionnelles" budget="$ctrl.budget.depensesOccasionnelles">
             <h2>Dépensens occasionnelles</h2>
         </budget-block>
+    </div>
+</div>
+<div class="row row-centered">
+    <div class="col-md-12">
+        Reste pour le mois: {{$ctrl.getReste()}}<br>
+        <button ng-click="$ctrl.getApi(666)">Test API</button>
     </div>
 </div>

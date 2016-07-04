@@ -1,6 +1,5 @@
 <div ng-transclude></div>
 <div>
-    <button ng-click="$ctrl.getApi(666)">Test API</button>
     <table class="table">
         <thead>
             <tr>
@@ -10,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="budget in $ctrl.blockData">
+            <tr ng-repeat="budget in $ctrl.budget">
                 <td>{{budget.id}}</td>
                 <td>{{budget.intitule}}</td>
                 <td>
