@@ -11,7 +11,7 @@ var pgp = require("pg-promise")();
 var db = pgp({
     host: 'localhost',
     port: 5432,
-    database: 'stock',
+    database: 'budget',
     user: 'postgres',
     password: 'root'
 });
@@ -43,7 +43,7 @@ app.get("/", function(request, response) {
 	response.end("index route");
 });
 app.get("/api", function(request, response) {
-	db.one("select * from produit where id=$1", 3)
+	db.one("select * from type where id=$1", 1)
     .then(function (data) {
 		response.send(data);
     })

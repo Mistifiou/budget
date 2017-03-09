@@ -90,7 +90,7 @@ function BlockBudgetController() {
         });
     };
     /**
-     * Calcule totaldes lignes de budget
+     * Calcule total des lignes de budget
      */
     function getTotal() {
         var total = 0;
