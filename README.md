@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-[https://github.com/sefo/budget](projet initial)
-
 DONE :
 
 lier à la bdd
