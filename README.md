@@ -1,4 +1,4 @@
-[https://github.com/sefo/budget](from sefo/budget)
+[from sefo/budget](https://github.com/sefo/budget)
 
 DONE :
 
