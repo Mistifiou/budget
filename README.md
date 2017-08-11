@@ -1,3 +1,5 @@
+[https://github.com/sefo/budget](from sefo/budget)
+
 DONE :
 
 lier à la bdd
@@ -27,4 +29,3 @@ ALTER TABLE public.ligne_budget
 =======
 # budget
 liaison avec BDD du projet sefo/budget
->>>>>>> branch 'master' of https://github.com/Mistifiou/budget.git
