@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [https://github.com/sefo/budget](projet initial)
 
 DONE :
@@ -26,3 +27,7 @@ TABLESPACE pg_default;
 ALTER TABLE public.ligne_budget
     OWNER to postgres;
 ```
+=======
+# budget
+liaison avec BDD du projet sefo/budget
+>>>>>>> branch 'master' of https://github.com/Mistifiou/budget.git
