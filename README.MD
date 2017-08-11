@@ -1,14 +1,28 @@
-npm start
-https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+[https://github.com/sefo/budget](projet initial)
 
-TODO:
+DONE :
 
-lier a la bdd (schematiser les tables, faire liste des requetes et des acces api, retourner du json)
+lier à la bdd
 
-validation sur edit et add
+``` 
+-- Table: public.ligne_budget
 
-faire des tests e2e et unitaires
+-- DROP TABLE public.ligne_budget;
 
-faire une icone sur le bureau qui lance le serveur et l'index
+CREATE TABLE public.ligne_budget
+(
+    date date,
+    type integer,
+    intitule text COLLATE pg_catalog."default",
+    valeur integer,
+    id integer NOT NULL DEFAULT nextval('ligne_budget_id_seq'::regclass),
+    CONSTRAINT ligne_budget_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
 
-tester la minification
+ALTER TABLE public.ligne_budget
+    OWNER to postgres;
+```
